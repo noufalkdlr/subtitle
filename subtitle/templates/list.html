@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% for a in info %}
+
+<h1>Title: {{a.title}}</h1>
+<h4>Year:{{a.year}}</h4>
+<img src="{{a.poster.url}}" alt="">
+{% endfor %}
+
+{% endblock content %}

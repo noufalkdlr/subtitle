@@ -22,3 +22,8 @@ def list(request):
 
 def edit(request):
     return render(request, 'edit.html')
+
+def delete(request,id):
+    dele = MovieInfo.objects.get(id = id)
+    dele.delete()
+    return redirect('/list')
